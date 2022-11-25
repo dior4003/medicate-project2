@@ -1,17 +1,15 @@
 .hero {
   position: relative;
   .hero_bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
     width: 100%;
     z-index: -2;
   }
 }
 .hero-box__info {
   padding-top: 50px;
+  position: absolute;
+  top: 10%;
+  left: 10%;
 }
 .hero-box__title {
   margin-bottom: 20px;
@@ -58,11 +56,6 @@
   .hero {
     position: relative;
     .hero_bg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
       width: 100%;
       z-index: -2;
     }
@@ -70,6 +63,9 @@
 
   .hero-box__info {
     padding-top: 100px;
+    position: absolute;
+    top: 10%;
+    left: 10%;
   }
   .hero-box__title {
     margin-bottom: 20px;
@@ -117,17 +113,16 @@
   .hero {
     position: relative;
     .hero_bg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
       width: 100%;
       z-index: -2;
     }
   }
   .hero-box {
     padding-left: 30px;
+    position: absolute;
+    top: 3%;
+    left: 3%;
+    width: 60%;
   }
   .hero-box__info {
     padding-top: 30px;
@@ -157,7 +152,7 @@
     margin-bottom: 20px;
     color: #fff;
     font-size: 18px;
-    line-height: 30px;
+    line-height: 20px;
     width: 70%;
   }
   .hero-box__link {
@@ -180,17 +175,16 @@
   .hero {
     position: relative;
     .hero_bg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
       width: 100%;
       z-index: -2;
     }
   }
   .hero-box {
     padding-left: 10px;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 60%;
   }
   .hero-box__info {
     padding-top: 10px;
@@ -212,7 +206,7 @@
   .hero-box__site-title {
     margin: 0;
     margin-bottom: 8px;
-    width: 60%;
+    width: 80%;
     color: #fff;
     font-size: 18px;
   }
@@ -222,13 +216,75 @@
     color: #fff;
     font-size: 11px;
     line-height: 10px;
-    width: 50%;
+    width: 80%;
   }
   .hero-box__link {
     display: inline-block;
     padding: 5px;
     padding-right: 10px;
     font-size: 11px;
+    background-color: rgb(44, 125, 190);
+    color: #fff;
+    background-image: url("../images/plus.png");
+    background-repeat: no-repeat;
+    background-size: 17px;
+    border-radius: 8px;
+    background-position: calc(50% + 60px) calc(50%);
+    text-decoration: none;
+  }
+}
+@media (max-width: 370px) {
+  .hero {
+    position: relative;
+    .hero_bg {
+      width: 100%;
+      z-index: -2;
+    }
+  }
+  .hero-box {
+    padding-left: 10px;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 60%;
+  }
+  .hero-box__info {
+    padding-top: 10px;
+  }
+  .hero-box__title {
+    margin-bottom: 8px;
+    padding: 4px;
+    display: inline-block;
+    color: #fff;
+
+    font-size: 8px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.295);
+  }
+  .hero-box__title-box {
+    width: 100%;
+    max-width: 500px;
+  }
+  .hero-box__site-title {
+    margin: 0;
+    margin-bottom: 8px;
+    width: 80%;
+    color: #fff;
+    font-size: 14px;
+  }
+  .hero-box__text {
+    margin: 0;
+    margin-bottom: -1px;
+    color: #fff;
+    font-size: 7px;
+    line-height: 10px;
+    width: 80%;
+  }
+  .hero-box__link {
+    display: inline-block;
+    padding: 5px;
+    padding-right: 10px;
+    font-size: 7px;
     background-color: rgb(44, 125, 190);
     color: #fff;
     background-image: url("../images/plus.png");
