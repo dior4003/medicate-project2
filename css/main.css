@@ -951,9 +951,16 @@ body {
 }
 .hero {
   height: 100vh;
-  background-image: url("../images/hero-bg.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
+  position: relative;
+}
+.hero .hero_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index: -2;
 }
 
 .hero-box__info {
@@ -1058,7 +1065,6 @@ body {
     background-position: calc(50% - 180px) 50%;
   }
 }
-
 #servises {
   width: 100%;
   background-color: #eee;
@@ -1071,6 +1077,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 0px;
+  padding: 200px 0 50px 0;
 }
 #servises .servises_container {
   width: 70%;
@@ -6499,6 +6507,163 @@ body {
     background-color: rgb(0, 0, 0);
   }
 }
+.services {
+  position: relative;
+  height: 550px;
+  padding: 100px 0px;
+  background-color: transparent;
+}
+
+.services-box__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.services-box__short-title {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 5px;
+  color: #2490eb;
+  font-size: 13px;
+  letter-spacing: 2px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.services-box__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 105px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0;
+  list-style: none;
+}
+
+.services-box__item {
+  margin-right: 40px;
+}
+
+.services-box__item:last-child {
+  margin-right: 0;
+}
+
+.services-box__item::before {
+  position: absolute;
+  bottom: 200px;
+  left: -100px;
+  content: "";
+  width: 20px;
+  height: 30px;
+  display: inline-block;
+  padding: 5px;
+  background-image: url("../images/doctor-icon.png");
+  background-repeat: no-repeat;
+  background-color: #2490eb;
+  z-index: 10;
+}
+
+.services-box__item-img {
+  width: 350px;
+}
+
+.services-box__info {
+  width: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #fff;
+}
+
+.services-box__title {
+  margin: 0;
+  font-size: 35px;
+  letter-spacing: 3px;
+  text-align: left;
+  color: #fff;
+}
+
+.services-box__info-title {
+  margin: 0;
+  margin-bottom: 5px;
+  letter-spacing: 2px;
+  color: #000;
+}
+
+.services-box__info-text {
+  margin: 0;
+  margin-bottom: 10px;
+  color: rgba(0, 0, 0, 0.623);
+}
+
+.services-box__info-link {
+  text-decoration: none;
+  color: #2490eb;
+  font-size: 15px;
+}
+
+@media only screen and (max-width: 1250px) {
+  .services-box__list {
+    left: calc(50% - 560px);
+  }
+}
+@media only screen and (max-width: 1160px) {
+  .services-box__list {
+    left: calc(50% - 380px);
+  }
+  .services-box__item:last-child {
+    display: none;
+  }
+}
+@media only screen and (max-width: 816px) {
+  .services-box__list {
+    left: calc(50% - 150px);
+  }
+  .services-box__item:first-child {
+    margin-right: 0;
+  }
+  .services-box__item:nth-child(2) {
+    display: none;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .services-box__list {
+    left: calc(50% - 150px);
+  }
+  .services-box__item:first-child {
+    width: 100%;
+    max-width: 300px;
+  }
+  .services-box__item-img {
+    width: 300px;
+  }
+  .services-box__info {
+    max-width: 300px;
+  }
+}
 a {
   text-decoration: none;
   color: #fff;
@@ -6521,9 +6686,10 @@ a {
 }
 
 #bg {
-  background-image: url(https://funart.pro/uploads/posts/2020-03/1584385160_9-p-foni-dlya-meditsinskikh-prezentatsii-17.jpg);
+  background-image: url(https://medicate.peacefulqode.com/wp-content/uploads/2022/03/3.png);
   width: 100%;
   background-size: 100% 100%;
+  background-color: #14457b;
   height: 100%;
   position: fixed;
   z-index: -9999;
@@ -6539,18 +6705,6 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-=======
-.services {
-  position: relative;
-  height: 550px;
-  padding: 100px 0px;
-  background-color: #2490EB;
-}
-
-.services-box__top {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -6558,7 +6712,6 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-
   padding-top: 100px;
   z-index: -1;
 }
@@ -6704,82 +6857,10 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.services-box__short-title {
-  display: inline-block;
-  margin-bottom: 10px;
-  padding: 5px;
-  color: #2490EB;
-  font-size: 13px;
-  letter-spacing: 2px;
-  background-color: #fff;
-  border-radius: 5px;
-}
-
-.services-box__list {
-  position: absolute;
-  top: 280px;
-  left: 100px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 0;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 0;
-  list-style: none;
-}
-
-.services-box__item {
-  margin-right: 40px;
-}
-
-.services-box__item:last-child {
-  margin-right: 0;
-}
-
-.services-box__item::before {
-  position: absolute;
-  bottom: 200px;
-  left: -100px;
-  content: "";
-  width: 20px;
-  height: 30px;
-  display: inline-block;
-  padding: 5px;
-  background-image: url("../images/doctor-icon.png");
-  background-repeat: no-repeat;
-  background-color: #2490EB;
-  z-index: 10;
-}
-
-.services-box__item-img {
-  width: 350px;
-}
-
-.services-box__info {
-  width: 350px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 20px;
-
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-
 }
 .footer .footer_container .footer_links .links3 .items {
   width: 100%;
@@ -7499,74 +7580,5 @@ a {
     z-index: -9999;
     top: 0;
     left: 0;
-=======
-  background-color: #fff;
-}
-
-.services-box__title {
-  margin: 0;
-  font-size: 35px;
-  letter-spacing: 3px;
-  text-align: left;
-  color: #fff;
-}
-
-.services-box__info-title {
-  margin: 0;
-  margin-bottom: 5px;
-  letter-spacing: 2px;
-  color: #000;
-}
-
-.services-box__info-text {
-  margin: 0;
-  margin-bottom: 10px;
-  color: rgba(0, 0, 0, 0.623);
-}
-
-.services-box__info-link {
-  text-decoration: none;
-  color: #2490EB;
-  font-size: 15px;
-}
-
-@media only screen and (max-width: 1250px) {
-  .services-box__list {
-    left: calc(50% - 560px);
-  }
-}
-@media only screen and (max-width: 1160px) {
-  .services-box__list {
-    left: calc(50% - 380px);
-  }
-  .services-box__item:last-child {
-    display: none;
-  }
-}
-@media only screen and (max-width: 816px) {
-  .services-box__list {
-    left: calc(50% - 150px);
-  }
-  .services-box__item:first-child {
-    margin-right: 0;
-  }
-  .services-box__item:nth-child(2) {
-    display: none;
-  }
-}
-@media only screen and (max-width: 375px) {
-  .services-box__list {
-    left: calc(50% - 150px);
-  }
-  .services-box__item:first-child {
-    width: 100%;
-    max-width: 300px;
-  }
-  .services-box__item-img {
-    width: 300px;
-  }
-  .services-box__info {
-    max-width: 300px;
-
   }
 }/*# sourceMappingURL=main.css.map */
